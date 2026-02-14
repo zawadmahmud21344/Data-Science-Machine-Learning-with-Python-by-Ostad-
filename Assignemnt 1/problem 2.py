@@ -1,7 +1,26 @@
-total = 0
+#Basic Calcualtor
 
-for num in range(1, 101):
-    if num % 2 == 0:
-        total =total+ num
+# Take two numbers from user
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-print("Sum of even numbers from 1 to 100:", total)
+# Take operator
+operator = input("Enter operator (+, -, *, /): ")
+
+# Perform calculation
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error: Division by zero"
+else:
+    result = "Invalid operator"
+
+# Show result
+print("Result:", result)
